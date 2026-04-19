@@ -76,6 +76,8 @@ defuddle parse "https://www.bilibili.com/read/cv..." --md
 curl -s "https://r.jina.ai/https://www.bilibili.com/read/cv..."
 ```
 
+Extraction outputs such as `defuddle.md` or `defuddle.json` are temporary/debug artifacts. Do not treat them as final Obsidian notes. The final article output is `article.md` plus local `images/`, with optional `metadata.json`.
+
 ### Step 3: Download Images
 
 Create `images/` subdirectory and download with sequential naming:

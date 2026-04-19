@@ -102,8 +102,8 @@ mcporter call 'douyin.parse_douyin_video_info(share_link: "...")'
 
 ### Step 3: Process and Save
 
-- Video: SRT → compress → transcript.md → calibrate → summary.md
-- Article: Extract → download images → article.md
+- Video: SRT → compress → transcript.md with frontmatter → calibrate → summary.md with frontmatter
+- Article: Extract → download images → article.md. Treat tool outputs such as defuddle.md/json as temporary artifacts, not final notes.
 
 **Important:** Before writing any `.md` file, invoke the `obsidian-markdown` skill to ensure correct Obsidian Flavored Markdown syntax (wikilinks, embeds, callouts, properties).
 

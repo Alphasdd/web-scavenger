@@ -94,11 +94,25 @@ Store in `raw/video_processing/<video_id>/chunks/`
 **Invoke `obsidian-markdown` skill before writing to ensure correct syntax.**
 
 ```bash
-python scripts/compressed-to-transcript-md.py "<compressed_txt>" -o "<summary_dir>/transcript.md" --video-rel "../../videos/<video_id>_<slug>.mp4" --title "<title> 时间轴校对稿"
+python scripts/compressed-to-transcript-md.py "<compressed_txt>" -o "<summary_dir>/transcript.md" --video-rel "../../videos/<video_id>_<slug>.mp4" --title "<title> 时间轴校对稿" --source "<original_url>" --platform "<platform>"
 ```
 
 Format:
 ```markdown
+---
+title: "<title> 时间轴校对稿"
+type: video_transcript
+video: ../../videos/<video>.mp4
+platform: <platform>
+date_saved: 2026-04-19
+status: draft_from_compressed_subtitles
+source: <original_url>
+tags:
+  - web-scavenger
+  - video
+  - transcript
+---
+
 # <title> 时间轴校对稿
 
 > 用途：本稿已完成 Claude 第一轮术语和明显错字校验
@@ -130,6 +144,24 @@ Mark status in metadata:
 **Invoke `obsidian-markdown` skill before writing to ensure correct syntax.**
 
 Generate from calibrated or user-edited transcript.md.
+
+`summary.md` must also include Obsidian frontmatter:
+
+```yaml
+---
+title: "<title>"
+type: video_summary
+source: <original_url>
+platform: <platform>
+video: ../../videos/<video>.mp4
+transcript: transcript.md
+date_saved: 2026-04-19
+tags:
+  - web-scavenger
+  - video
+  - summary
+---
+```
 
 **Summary Style Requirements:**
 

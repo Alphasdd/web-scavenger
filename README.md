@@ -23,6 +23,8 @@ Web Scavenger 是一个面向 Obsidian + LLM Wiki 知识库工作流的内容采
 | 视频 | 本地视频、B 站、抖音、小红书视频 | `transcript.md` + `summary.md` + 本地视频 |
 | 其他媒体 | 只要能获得可下载视频/音频链接即可接入 | 走通用视频 workflow |
 
+> 图文流程里，`defuddle` 是网页正文提取工具；如果临时生成了 `defuddle.md` 或 `defuddle.json`，它们只属于调试/中间产物，不是最终知识库笔记。长期保留的图文产物应以 `article.md`、`images/` 和可选 `metadata.json` 为准。
+
 ## Features
 
 | 内容类型 | 支持平台 | 输出 |
@@ -214,6 +216,8 @@ mcporter config add douyin --command douyin-mcp-server --scope home
 
 ### Frontmatter 字段约定
 
+图文笔记：
+
 ```yaml
 ---
 title: 文章标题
@@ -224,6 +228,42 @@ author: 作者名
 tags:
   - tag1
   - tag2
+---
+```
+
+视频校对稿：
+
+```yaml
+---
+title: 视频标题 时间轴校对稿
+type: video_transcript
+source: <原始链接或本地路径>
+platform: bilibili/douyin/youtube/local
+video: ../../videos/video.mp4
+date_saved: 2026-04-19
+status: draft_from_compressed_subtitles
+tags:
+  - web-scavenger
+  - video
+  - transcript
+---
+```
+
+视频总结：
+
+```yaml
+---
+title: 视频标题
+type: video_summary
+source: <原始链接或本地路径>
+platform: bilibili/douyin/youtube/local
+video: ../../videos/video.mp4
+transcript: transcript.md
+date_saved: 2026-04-19
+tags:
+  - web-scavenger
+  - video
+  - summary
 ---
 ```
 
