@@ -132,9 +132,9 @@ mcporter config add douyin --command douyin-mcp-server --scope home
 | 应用/插件 | 安装位置 | 用途 | 必需 |
 |------|----------|------|------|
 | **Obsidian** | 本地应用 | 知识库管理，查看生成的笔记 | ✅ |
-| **[Media Extended](https://github.com/aidenlx/media-extended)** | Obsidian 插件市场/手动安装到 Obsidian | 在 Obsidian 内点击视频时间戳，跳转到本地视频对应时间点 | 视频笔记 ✅ |
+| **[Media Extended](https://github.com/aidenlx/media-extended)** | 通过 Obsidian 自身插件市场安装 | 在 Obsidian 内点击视频时间戳，跳转到本地视频对应时间点 | 视频笔记 ✅ |
 
-> 注意：Media Extended 是 **Obsidian 内插件**，不是 Python、Node.js 或 AI 工具依赖。只有在 Obsidian 中安装并启用该插件后，视频笔记里的时间戳链接才能实现点击跳转到对应视频节点。
+> 注意：Media Extended 是 **Obsidian 内插件**，不是 Python、Node.js 或 AI 工具依赖。只有通过 Obsidian 自身插件市场安装并启用该插件后，视频笔记里的时间戳链接才能实现点击跳转到对应视频节点。
 
 ### 外部软件依赖
 
@@ -231,7 +231,7 @@ tags:
 - [00:01:23](../../videos/video.mp4#t=00:01:23) 核心观点
 ```
 
-要在 Obsidian 内点击时间戳并跳转到视频对应时间点，必须在 Obsidian 中安装并启用 [Media Extended](https://github.com/aidenlx/media-extended)。这是视频输出链路的 Obsidian 端必需插件，不需要安装到 Claude、Codex 或命令行环境里。
+要在 Obsidian 内点击时间戳并跳转到视频对应时间点，必须通过 Obsidian 自身插件市场安装并启用 [Media Extended](https://github.com/aidenlx/media-extended)。这是视频输出链路的 Obsidian 端必需插件，不需要安装到 Claude、Codex 或命令行环境里。
 
 ## Vault 目录结构
 

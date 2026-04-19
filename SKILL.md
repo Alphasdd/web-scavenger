@@ -111,7 +111,7 @@ mcporter call 'douyin.parse_douyin_video_info(share_link: "...")'
 
 - All image embeds resolve correctly
 - Timestamp links are present for video notes
-- For clickable timestamp playback inside Obsidian, tell the user to install and enable the Obsidian plugin [Media Extended](https://github.com/aidenlx/media-extended). This is an Obsidian-side plugin, not an AI tool dependency.
+- For clickable timestamp playback inside Obsidian, tell the user to install and enable [Media Extended](https://github.com/aidenlx/media-extended) through Obsidian's own plugin marketplace. This is an Obsidian-side plugin, not an AI tool dependency.
 - Frontmatter complete
 
 ## Dependencies
