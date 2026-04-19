@@ -206,3 +206,9 @@ From `raw/video_summaries/<video_id>/`:
 ```
 
 Relative path: `video_summaries/<id>/` → `videos/<file>.mp4`
+
+## Obsidian Playback Requirement
+
+Timestamp links are written for Obsidian playback. To click a timestamp in Obsidian and jump to the matching point in the local video, the user must install and enable the Obsidian plugin [Media Extended](https://github.com/aidenlx/media-extended).
+
+This is an Obsidian-side plugin requirement, not a Python, Node.js, Claude, or Codex dependency.
