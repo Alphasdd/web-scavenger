@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+ENV/
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+*.test.md
+
+# Logs
+*.log
+
+# Generated vault content and media
+raw/
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+*.flv
+*.wmv
+*.mp3
+*.wav
+*.m4a
+*.srt
+*.vtt
+
+# Backups and temporary outputs
+*.bak
+tmp/
+temp/
