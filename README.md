@@ -11,6 +11,10 @@ Web Scavenger 是一个面向 Obsidian + LLM Wiki 知识库工作流的内容采
 - **时间戳跳转**：视频笔记中的段落时间戳会链接到本地视频文件。需要通过 Obsidian 自身插件市场安装并启用 [Media Extended](https://github.com/aidenlx/media-extended)，之后即可在 Obsidian 中点击时间戳直接跳到视频对应时间点。
 - **统一 raw 层结构**：把文章、图片、视频文件、字幕、中间处理产物和最终笔记按固定目录组织，方便后续用 LLM 做总结、检索、重写和知识库加工。
 
+![Obsidian 视频笔记工作区示例](assets/obsidian-video-demo2.png)
+
+视频总结、时间戳跳转、本地视频播放和脑图视图可以在 Obsidian 中形成一个完整的回看工作区。
+
 ## Supported Inputs
 
 | 类型 | 当前支持 | 产物 |
