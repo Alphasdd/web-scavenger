@@ -64,6 +64,17 @@ Resolve:
 python scripts/videocaptioner-stage.py --url "<video_url>" --work-dir "<work_dir>" --language zh --model medium --device cpu
 ```
 
+**B站视频优化**：脚本自动检测B站URL，优先获取官方字幕（秒级），无字幕时fallback到Whisper ASR。
+
+**单独获取B站字幕**：
+```bash
+# 只获取字幕，不下载视频
+python scripts/bilibili-subtitle.py "<bilibili_url>" -o subtitle.srt
+
+# 列出可用字幕轨道
+python scripts/bilibili-subtitle.py "<bilibili_url>" --list
+```
+
 **From local video:**
 ```bash
 python scripts/videocaptioner-stage.py --video "<video_path>" --work-dir "<work_dir>" --language zh --model medium --device cpu
@@ -72,6 +83,10 @@ python scripts/videocaptioner-stage.py --video "<video_path>" --work-dir "<work_
 **From existing SRT:**
 - Use provided SRT if higher quality than ASR output
 - Copy to `raw/video_processing/<video_id>/srt/`
+
+**字幕来源标识**：输出JSON中的 `subtitle_source` 字段标识字幕来源：
+- `bilibili_official`：B站官方字幕（含CC字幕、AI字幕）
+- `local_asr`：本地Whisper ASR转录
 
 ### Step 3: Compress SRT
 

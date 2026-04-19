@@ -41,6 +41,8 @@ Web Scavenger 解决的就是这一步：把分散的平台内容统一转成 Ob
 | 抖音 | douyin.com, v.douyin.com | 视频信息 + 封面 |
 | 网页文章 | 博客、新闻、文档 | 清理后的 Markdown |
 
+**B站视频优化**：自动优先获取官方字幕（秒级），无字幕时才使用本地Whisper ASR转录，无需Cookie或登录。
+
 ## 平台工具一览
 
 | 平台 | 内容类型 | 主工具 | 备选方案 |
@@ -48,7 +50,7 @@ Web Scavenger 解决的就是这一步：把分散的平台内容统一转成 Ob
 | 小红书 | 图文笔记 | xhs-cli | agent-reach |
 | 微信公众号 | 图文文章 | defuddle | agent-reach (camoufox) |
 | 抖音 | 视频信息 | mcporter (douyin) | agent-reach |
-| B站 | 视频 | yt-dlp + VideoCaptioner | agent-reach |
+| B站 | 视频 | **官方字幕优先** + yt-dlp + VideoCaptioner | agent-reach |
 | B站 | 图文专栏 | defuddle | Jina Reader |
 | YouTube | 视频 | yt-dlp + VideoCaptioner | agent-reach |
 | 通用网页 | 图文 | defuddle | Jina Reader / agent-reach |

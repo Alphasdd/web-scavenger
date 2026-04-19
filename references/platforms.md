@@ -169,17 +169,34 @@ agent-reach douyin parse "<share_link>"
 - `https://www.bilibili.com/video/<video_id>`
 - `https://b23.tv/<short_code>` (短链接)
 
-#### 主工具：yt-dlp + VideoCaptioner
+#### 主工具：官方字幕优先 + yt-dlp + VideoCaptioner
 
 ```bash
-# 下载视频和字幕
+# 下载视频和字幕（自动优先获取B站官方字幕）
 python scripts/videocaptioner-stage.py --url "<url>" --work-dir "<dir>" --language zh --model medium --device cpu
 ```
 
-**流程**：
-1. yt-dlp 下载视频和字幕
-2. Faster Whisper ASR 转录（如无字幕）
-3. 生成 SRT 字幕文件
+**流程（自动）**：
+1. 检测B站URL，尝试获取官方字幕（秒级）
+2. 如无官方字幕，fallback到Whisper ASR转录
+3. 下载视频文件供本地播放
+
+**单独获取B站字幕**：
+```bash
+# 只获取字幕，不下载视频
+python scripts/bilibili-subtitle.py "<url>" --output-srt subtitle.srt
+
+# 列出可用字幕
+python scripts/bilibili-subtitle.py "<url>" --list
+
+# 指定语言
+python scripts/bilibili-subtitle.py "<url>" --language zh-CN -o subtitle.srt
+```
+
+**优势**：
+- 有官方字幕的视频：秒级完成，无需ASR
+- 无官方字幕的视频：自动fallback到本地Whisper
+- 无需Cookie或登录
 
 #### 备选方案：agent-reach
 
