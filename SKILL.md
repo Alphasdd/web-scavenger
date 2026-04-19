@@ -107,6 +107,8 @@ mcporter call 'douyin.parse_douyin_video_info(share_link: "...")'
 
 **Important:** Before writing any `.md` file, invoke the `obsidian-markdown` skill to ensure correct Obsidian Flavored Markdown syntax (wikilinks, embeds, callouts, properties).
 
+For video notes, helper scripts may generate mechanical drafts such as `transcript.md` frontmatter and timestamp links, but the agent is still responsible for loading and following `obsidian-markdown` before writing or updating both `transcript.md` and `summary.md`.
+
 ### Step 4: Quality Check
 
 - All image embeds resolve correctly

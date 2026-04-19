@@ -93,6 +93,8 @@ Store in `raw/video_processing/<video_id>/chunks/`
 
 **Invoke `obsidian-markdown` skill before writing to ensure correct syntax.**
 
+The helper script creates a mechanical draft with frontmatter and timestamp links. The agent must still load and follow `obsidian-markdown` rules before writing or updating the final `transcript.md`.
+
 ```bash
 python scripts/compressed-to-transcript-md.py "<compressed_txt>" -o "<summary_dir>/transcript.md" --video-rel "../../videos/<video_id>_<slug>.mp4" --title "<title> 时间轴校对稿" --source "<original_url>" --platform "<platform>"
 ```
@@ -142,6 +144,8 @@ Mark status in metadata:
 ### Step 7: Create summary.md
 
 **Invoke `obsidian-markdown` skill before writing to ensure correct syntax.**
+
+The agent writes `summary.md`, so it must load and follow `obsidian-markdown` rules before creating or updating the file.
 
 Generate from calibrated or user-edited transcript.md.
 
