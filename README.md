@@ -8,7 +8,7 @@ Web Scavenger 是一个面向 Obsidian + LLM Wiki 知识库工作流的内容采
 
 - **图文内容入库**：支持小红书、微信公众号、普通网页等来源，将正文提取为 Markdown，并把图片下载到本地，通过 Obsidian embeds / wikilinks 尽量还原原文的图文结构。
 - **视频内容入库**：支持本地视频或分享链接，自动下载、转录、压缩字幕，生成可审计的时间轴校对稿和结构化视频总结。
-- **时间戳跳转**：视频笔记中的段落时间戳会链接到本地视频文件。配合 [Media Extended](https://github.com/aidenlx/media-extended) 等 Obsidian 插件，可以在 Obsidian 中点击时间戳直接跳到视频对应时间点。
+- **时间戳跳转**：视频笔记中的段落时间戳会链接到本地视频文件。需要通过 Obsidian 自身插件市场安装并启用 [Media Extended](https://github.com/aidenlx/media-extended)，之后即可在 Obsidian 中点击时间戳直接跳到视频对应时间点。
 - **统一 raw 层结构**：把文章、图片、视频文件、字幕、中间处理产物和最终笔记按固定目录组织，方便后续用 LLM 做总结、检索、重写和知识库加工。
 
 ## Supported Inputs
